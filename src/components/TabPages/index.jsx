@@ -195,7 +195,7 @@ const TabPages = (props) => {
       className={styles.content_tab}
       activeKey={activeKey}
       onChange={onChange}
-      tabBarStyle={{ background: '#fff' }}
+      tabBarStyle={{ }}
       tabPosition="top"
       tabBarGutter={-1}
       hideAdd
@@ -209,7 +209,7 @@ const TabPages = (props) => {
         const disableClose =
           (tabs.includes('/') && tabs.length === 2 && i === 1) || tabs.length === 1;
         return (
-          <TabPane tab={tab} key={key} closable={!disableClose}>
+          <TabPane tab={tab} key={key} closable={!disableClose} style={{padding:'0 0 0 24px'}}>
             <Route key={tab} component={content} exact={exact} />
           </TabPane>
         );
